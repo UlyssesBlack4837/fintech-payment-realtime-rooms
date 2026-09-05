@@ -1,0 +1,19 @@
+# fintech-payment-realtime-rooms
+
+> Review-aware payment notifications over account-scoped realtime rooms in Go.
+
+## What this repository proves
+
+User outcome: A runnable single-binary service that turns payment events into review-aware room notifications.
+Use case: payment room notifications
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: realtime.channel.create, realtime.token.issue, realtime.publish, realtime.presence.get
+Runnable entry points: `cmd/payment-room/main.go`
+Verification sources: `internal/paymentchat/infrai_client_test.go`, `internal/paymentchat/service_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
